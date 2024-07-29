@@ -1,0 +1,16 @@
+services:
+  tt-api-gateway:
+    build: .
+    environment:
+      - TT_API_GATEWAY_URL=https://tikwm.com
+    ports:
+      - 4222:80
+    
+    deploy:
+      resources:
+        limits:
+          cpus: 0.1
+          memory: 50MB
+        reservations:
+          cpus: 0.01
+          memory: 10MB
