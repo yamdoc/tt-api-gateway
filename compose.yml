@@ -6,6 +6,7 @@ services:
     ports:
       - 4222:80
     
+    restart: always
     deploy:
       resources:
         limits:
